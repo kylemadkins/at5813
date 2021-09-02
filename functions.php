@@ -197,3 +197,17 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 // Custom Post Type Definitions
 require get_template_directory() . '/inc/custom-post-types/init.php';
+
+/**
+ * Enqueue scripts and styles.
+ */
+function at5813_theme_scripts() {
+    wp_enqueue_style( 'at5813-theme-wp-style', get_stylesheet_uri(), array(), _S_VERSION );
+
+    // Custom Site Style
+    wp_enqueue_style( 'at5813-theme-wp-site-style', get_template_directory_uri() . '/assets/css/styles.css' );
+
+    wp_enqueue_script( 'at5813-theme-wp-site-scripts', get_template_directory_uri() . '/assets/js-dist/main.js' );
+}
+
+add_action( 'wp_enqueue_scripts', 'at5813_theme_scripts' );

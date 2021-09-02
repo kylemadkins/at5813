@@ -14,6 +14,8 @@ function init_projects() {
             'update_item' => __( 'Update Project' ),
             'search_items' => __( 'Search Projects' )
         ),
-        'public' => true
+        'public' => true,
+        'show_in_rest' => true,
+        'supports' => array( 'title', 'editor' )
     ) );
 }

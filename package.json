@@ -21,6 +21,8 @@
     "sass": "^1.39.0",
     "sass-loader": "^12.1.0"
   },
-  "scripts": {
+  "scripts": {},
+  "dependencies": {
+    "bulma": "^0.9.3"
   }
 }

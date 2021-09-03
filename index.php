@@ -18,6 +18,7 @@ get_header();
 <div class="columns fullscreen-columns">
     <div class="column fullscreen--left-column">
         <section>
+			<div class="home-link" data-aos="fade-up" data-aos-duration="1000"><a class="button-link" href="/">Home</a></div>
 			<h1 data-aos="fade-up" data-aos-duration="1000">Assignments</h1>
 			<?php
 			$query = new WP_Query( array(

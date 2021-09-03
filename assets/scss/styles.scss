@@ -74,6 +74,10 @@ a {
         h1 {
             font-weight: 700;
             margin-bottom: 2rem;
+
+            @media screen and (max-width: $tablet) {
+                font-size: 1.6rem;
+            }
         }
 
         h2 {
@@ -84,12 +88,16 @@ a {
             font-size: 1rem;
             color: $lavender;
         }
+
+        figure {
+            text-align: center;
+        }
     
         p, pre, figure {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
 
-        pre, code, figure {
+        pre, figure {
             margin-left: -4vw;
             margin-right: -4vw;
 
@@ -100,14 +108,15 @@ a {
         }
 
         pre, code {
+            background: #011627;
             font-family: 'dm', monospace;
         }
 
         code.hljs {
-            padding: 4vw 8vw;
+            padding: 4vw 0;
 
             @media screen and (max-width: $tablet) {
-                padding: 10vw 16vw;
+                padding: 10vw 8vw;
             }
         }
 
@@ -136,6 +145,7 @@ a {
             left: 4vw;
             bottom: 4vw;
             color: $white;
+            font-size: 1.2rem;
 
             @media screen and (max-width: $tablet) {
                 left: 8vw;
@@ -143,6 +153,7 @@ a {
             }
 
             a {
+                font-size: 0.9rem;
                 color: $white;
 
                 &:hover {
@@ -167,11 +178,6 @@ a {
     a {
         background: none;
         margin-right: 1.4rem;
-
-        img {
-            width: 1.4rem;
-            height: auto;
-        }
     }
 }
 
@@ -182,4 +188,27 @@ a {
     width: 100%;
     object-fit: cover;
     object-position: left;
+}
+
+.hide-desktop {
+    display: none;
+
+    @media screen and (max-width: $tablet) {
+        display: block;
+    }
+}
+
+article {
+    header, p, code {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    img {
+        max-width: 900px;
+    }
+}
+
+.home-link {
+    margin-bottom: 1rem;
 }

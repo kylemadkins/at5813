@@ -11,6 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<div class="home-link" data-aos="fade-up" data-aos-duration="1000"><a class="button-link" href="/">Home</a></div>
 		<h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="entry-title button-container"><?php the_title(); ?></h1>
 		<div class="entry-meta">
 		</div><!-- .entry-meta -->

@@ -1,4 +1,4 @@
-<div class="column fullscreen--right-column">
+<div class="column fullscreen--right-column <?php echo $args['class']; ?>">
     <div class="social-links" data-aos="fade-up" data-aos-duration="1000">
         <a href="https://twitter.com/kylemadkins"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.svg"></a>
         <a href="https://www.linkedin.com/in/kyle-adkins-299012117"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.svg"></a>

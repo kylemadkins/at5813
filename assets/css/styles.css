@@ -2159,6 +2159,11 @@ a:hover {
   font-weight: 700;
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 769px) {
+  .fullscreen--left-column section h1 {
+    font-size: 1.6rem;
+  }
+}
 .fullscreen--left-column section h2 {
   font-family: "Sporting Grotesque_Bold", sans-serif;
   text-transform: uppercase;
@@ -2167,28 +2172,32 @@ a:hover {
   font-size: 1rem;
   color: #433DAD;
 }
-.fullscreen--left-column section p, .fullscreen--left-column section pre, .fullscreen--left-column section figure {
-  margin-bottom: 2rem;
+.fullscreen--left-column section figure {
+  text-align: center;
 }
-.fullscreen--left-column section pre, .fullscreen--left-column section code, .fullscreen--left-column section figure {
+.fullscreen--left-column section p, .fullscreen--left-column section pre, .fullscreen--left-column section figure {
+  margin-bottom: 3rem;
+}
+.fullscreen--left-column section pre, .fullscreen--left-column section figure {
   margin-left: -4vw;
   margin-right: -4vw;
 }
 @media screen and (max-width: 769px) {
-  .fullscreen--left-column section pre, .fullscreen--left-column section code, .fullscreen--left-column section figure {
+  .fullscreen--left-column section pre, .fullscreen--left-column section figure {
     margin-left: -8vw;
     margin-right: -8vw;
   }
 }
 .fullscreen--left-column section pre, .fullscreen--left-column section code {
+  background: #011627;
   font-family: "dm", monospace;
 }
 .fullscreen--left-column section code.hljs {
-  padding: 4vw 8vw;
+  padding: 4vw 0;
 }
 @media screen and (max-width: 769px) {
   .fullscreen--left-column section code.hljs {
-    padding: 10vw 16vw;
+    padding: 10vw 8vw;
   }
 }
 .fullscreen--left-column section pre {
@@ -2213,6 +2222,7 @@ a:hover {
   left: 4vw;
   bottom: 4vw;
   color: #fff;
+  font-size: 1.2rem;
 }
 @media screen and (max-width: 769px) {
   .fullscreen--right-column figure figcaption {
@@ -2221,6 +2231,7 @@ a:hover {
   }
 }
 .fullscreen--right-column figure figcaption a {
+  font-size: 0.9rem;
   color: #fff;
 }
 .fullscreen--right-column figure figcaption a:hover {
@@ -2243,10 +2254,6 @@ a:hover {
   background: none;
   margin-right: 1.4rem;
 }
-.social-links a img {
-  width: 1.4rem;
-  height: auto;
-}
 
 .full-img {
   vertical-align: top;
@@ -2257,4 +2264,25 @@ a:hover {
      object-fit: cover;
   -o-object-position: left;
      object-position: left;
+}
+
+.hide-desktop {
+  display: none;
+}
+@media screen and (max-width: 769px) {
+  .hide-desktop {
+    display: block;
+  }
+}
+
+article header, article p, article code {
+  max-width: 700px;
+  margin: 0 auto;
+}
+article img {
+  max-width: 900px;
+}
+
+.home-link {
+  margin-bottom: 1rem;
 }

@@ -2188,15 +2188,26 @@ a:hover {
     margin-right: -8vw;
   }
 }
-.fullscreen--left-column section pre, .fullscreen--left-column section code {
-  background: #011627;
+.fullscreen--left-column section code, .fullscreen--left-column section a code, .fullscreen--left-column section code a {
+  text-transform: none;
+  padding: 0 0.2rem;
+  background: none;
   font-family: "dm", monospace;
+  color: #433DAD;
+  font-size: 1rem;
 }
-.fullscreen--left-column section code.hljs {
+.fullscreen--left-column section a code, .fullscreen--left-column section code a {
+  text-decoration: underline;
+}
+.fullscreen--left-column section pre, .fullscreen--left-column section pre code {
+  background: #011627;
+}
+.fullscreen--left-column section pre code.hljs {
+  font-size: 0.9rem;
   padding: 4vw 0;
 }
 @media screen and (max-width: 769px) {
-  .fullscreen--left-column section code.hljs {
+  .fullscreen--left-column section pre code.hljs {
     padding: 10vw 8vw;
   }
 }

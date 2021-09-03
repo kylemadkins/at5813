@@ -107,12 +107,25 @@ a {
             }
         }
 
-        pre, code {
-            background: #011627;
+        code, a code, code a {
+            text-transform: none;
+            padding: 0 0.2rem;
+            background: none;
             font-family: 'dm', monospace;
+            color: $lavender;
+            font-size: 1rem;
         }
 
-        code.hljs {
+        a code, code a {
+            text-decoration: underline;
+        }
+
+        pre, pre code {
+            background: #011627;
+        }
+
+        pre code.hljs {
+            font-size: 0.9rem;
             padding: 4vw 0;
 
             @media screen and (max-width: $tablet) {

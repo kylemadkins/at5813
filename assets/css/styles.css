@@ -2056,6 +2056,27 @@ a:hover {
   color: #000000;
 }
 
+.social-links {
+  z-index: 2;
+  position: absolute;
+  left: 4vw;
+  top: 4vw;
+}
+@media screen and (max-width: 769px) {
+  .social-links {
+    left: 8vw;
+    top: 8vw;
+  }
+}
+.social-links a {
+  background: none;
+  margin-right: 1.4rem;
+}
+.social-links a img {
+  width: 1.4rem;
+  height: auto;
+}
+
 .full-img {
   vertical-align: top;
   position: relative;

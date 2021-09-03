@@ -6,33 +6,29 @@ Template Post Type: page
 get_header();
 ?>
 
-    <main id="primary" class="site-main">
+<div class="columns fullscreen-columns">
+    <div class="column fullscreen--left-column">
+        <section>
+			<h1 data-aos="fade-up" data-aos-duration="1000">Projects</h1>
+			<?php
+            $query = new WP_Query( array(
+                'post_type' => 'projects',
+                'orderby' => 'date',
+                'order' => 'ASC'
+            ) );
+			if ( $query->have_posts() ) :
+                $i = 100;
+				while ( $query->have_posts() ) :
+                    $i += 100;
+					$query->the_post(); ?>
+                    <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?php echo $i; ?>" class="entry-title button-container"><a class="button-link" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+				<?php endwhile;
+			endif;
+			?>
+        </section>
+    </div>
+    <?php get_template_part( 'template-parts/right-column' ); ?>
+</div>
 
-    <?php
-    $query = new WP_Query( array(
-        'post_type' => 'projects'
-    ) );
-
-    if ( $query->have_posts() ) :
-
-        /* Start the Loop */
-        while ( $query->have_posts() ) :
-            $query->the_post();
-
-            /*
-            * Include the Post-Type-specific template for the content.
-            * If you want to override this in a child theme, then include a file
-            * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-            */
-            get_template_part( 'template-parts/content', get_post_type() );
-
-        endwhile;
-
-    else :
-
-        get_template_part( 'template-parts/content', 'none' );
-
-    endif;
-    ?>
-
-    </main><!-- #main -->
+<?php
+get_footer();

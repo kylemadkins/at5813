@@ -11,12 +11,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+		<h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="entry-title button-container"><?php the_title(); ?></h1>
 		<div class="entry-meta">
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" class="entry-content">
 		<?php
 		the_content(
 			sprintf(

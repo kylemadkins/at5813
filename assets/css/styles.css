@@ -1979,12 +1979,19 @@ table th {
 body {
   font-size: 16px;
   font-family: "Work Sans", sans-serif;
-  color: #000;
+  color: #000000;
 }
 
 .fullscreen-columns {
   height: 100vh;
   margin: 0;
+}
+@media screen and (max-width: 769px) {
+  .fullscreen-columns {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+  }
 }
 .fullscreen-columns:last-child {
   margin: 0;
@@ -1994,22 +2001,26 @@ body {
 }
 
 h1 {
-  color: #063D3A;
+  color: #1E1A65;
   font-family: "Sporting Grotesque_Bold", sans-serif;
   font-size: 3rem;
 }
 
 a {
+  position: relative;
   font-family: "Sporting Grotesque_Bold", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   font-weight: 700;
   font-size: 0.7rem;
-  color: #008D83;
-  transition: 1s ease;
+  color: #433DAD;
+  transition: 0.4s ease;
+  background-size: 200%;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #F9F871 0);
 }
 a:hover {
-  color: #000;
+  color: #000000;
+  background-position: -100%;
 }
 
 .site-header {
@@ -2017,24 +2028,8 @@ a:hover {
   justify-content: space-between;
 }
 
-.home-left-column {
-  background: linear-gradient(45deg, #F0F8F8 0 40%, #fff 40% 100%);
-}
-
 .home-right-column {
   position: relative;
-}
-.home-right-column::after {
-  background-color: #14403D;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  mix-blend-mode: overlay;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
 }
 .home-right-column figure {
   height: 100%;
@@ -2044,18 +2039,25 @@ a:hover {
   z-index: 2;
   max-width: 300px;
   position: absolute;
-  left: 2vw;
-  bottom: 2vw;
+  left: 4vw;
+  bottom: 4vw;
   color: #fff;
+}
+@media screen and (max-width: 769px) {
+  .home-right-column figure figcaption {
+    left: 8vw;
+    bottom: 8vw;
+  }
 }
 .home-right-column figure figcaption a {
   color: #fff;
 }
 .home-right-column figure figcaption a:hover {
-  color: #fff;
+  color: #000000;
 }
 
 .full-img {
+  vertical-align: top;
   position: relative;
   height: 100%;
   width: 100%;
@@ -2063,12 +2065,15 @@ a:hover {
      object-fit: cover;
   -o-object-position: left;
      object-position: left;
-  filter: grayscale(1);
-  opacity: 0.8;
 }
 
 .about-me {
   padding: 8vw;
+}
+@media screen and (max-width: 769px) {
+  .about-me {
+    padding: 10vw 8vw;
+  }
 }
 .about-me h1 {
   font-weight: 700;

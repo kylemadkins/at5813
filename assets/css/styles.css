@@ -2203,6 +2203,7 @@ a:hover {
   background: #011627;
 }
 .fullscreen--left-column section pre code.hljs {
+  color: #d6deeb;
   font-size: 0.9rem;
   padding: 4vw 0;
 }

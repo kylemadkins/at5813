@@ -2298,3 +2298,7 @@ article img {
 .home-link {
   margin-bottom: 1rem;
 }
+
+body.single .fullscreen--left-column {
+  overflow: initial;
+}
